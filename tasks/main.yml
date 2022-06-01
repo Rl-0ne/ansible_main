@@ -1,5 +1,6 @@
 ---
 # tasks file for ansible_main
+
 - name: display message
   debug: "msg=What is going on here: We trying to include role from diffrent git repo"
 
