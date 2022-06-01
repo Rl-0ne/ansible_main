@@ -1,7 +1,6 @@
 ---
 # tasks file for ansible_main
-
-- name: display post install message
+- name: display message
   debug:
     msg:
       - 'What is going on here:'
