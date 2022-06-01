@@ -4,7 +4,7 @@
   tasks:
 
     - name: display message
-      debug: "msg=What is going on here: We trying to include role from diffrent git repo"
+      shell: cat /etc/*-release
     
     - name: includes | loading local task
       include_tasks: not_main.yml
