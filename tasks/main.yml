@@ -1,14 +1,16 @@
 ---
 # tasks file for ansible_main
+- name: Getting Started First Playbook
+  tasks:
 
-- name: display message
-  debug: "msg=What is going on here: We trying to include role from diffrent git repo"
-
-- name: includes | loading local task
-  include_tasks: not_main.yml
-
-- name: includes | loading remote role
-  include_role: 
-    name: github:test
-  when:
-    - selected_environment is defined
+    - name: display message
+      debug: "msg=What is going on here: We trying to include role from diffrent git repo"
+    
+    - name: includes | loading local task
+      include_tasks: not_main.yml
+    
+    - name: includes | loading remote role
+      include_role: 
+        name: github:test
+      when:
+        - selected_environment is defined
