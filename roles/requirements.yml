@@ -1,0 +1,7 @@
+---
+
+# Test git repo
+- name: github:test
+  src: https://github.com/Rl-0ne/ansible_sub
+  scm: git
+  version: master

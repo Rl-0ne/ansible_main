@@ -1,0 +1,3 @@
+---
+# vars file for ansible_main
+selected_environment: "{{ test1 }}"
