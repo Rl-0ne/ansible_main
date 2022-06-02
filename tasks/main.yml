@@ -10,6 +10,17 @@
     - name: includes | loading local task
       include_tasks: not_main.yml
 
+- name: Prepare for patching
+  gather_facts: no
+  hosts: localhost
+  vars:
+    required_roles:
+      - github:test
+      - github:main
+  tasks:
+    - name: patch | Get dependencies
+      include_tasks: get-deps.yml
+
     - name: includes | loading remote role
       include_role: 
         name: github:test

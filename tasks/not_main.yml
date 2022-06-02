@@ -1,16 +1,8 @@
 ---
 # tasks file for ansible_main
 - name: Testing include
-  gather_facts: no
-  hosts: localhost
-  vars:
-    required_roles:
-      - github:test
-      - github:main  
+  hosts: all
   tasks:
     - name: display message
       debug:
         msg: 'This is locally included task/role'
-    - name: patch | Get dependencies
-      include_tasks: get-deps.yml
-  
