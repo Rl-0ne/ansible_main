@@ -6,10 +6,11 @@
     - name: display message
       debug:
         msg: 'Script Started'
+
     - name: includes | loading local task
       include_tasks: not_main.yml
+
     - name: includes | loading remote role
       include_role: 
-       name: github:test
-      when:
-        - selected_environment is defined
+        name: github:test
+
