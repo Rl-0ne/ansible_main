@@ -1,1 +1,9 @@
 ---
+
+# tasks file for ansible_main
+- name: Testing include
+  hosts: all
+  tasks:
+    - name: display message
+      debug:
+        msg: 'This is locally included task/role'
