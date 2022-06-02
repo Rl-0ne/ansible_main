@@ -1,7 +1,7 @@
 ---
 # tasks file for ansible_main
 - name: Getting Started First Playbook
-  hosts: localhost
+  hosts: all
   tasks:
 
     - name: display message
