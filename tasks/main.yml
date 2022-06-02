@@ -6,10 +6,8 @@
     - name: display message
       debug:
         msg: 'Script Started'
-
     - name: includes
-      include_tasks:
-        - not_main.yml
+      include_tasks: not_main.yml
 
 - name: Prepare for patching
   gather_facts: no
