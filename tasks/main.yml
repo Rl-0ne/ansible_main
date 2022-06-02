@@ -9,6 +9,7 @@
     #- name: includes | loading local task
     #  include_tasks: not_main.yml
     - name: includes | loading remote role
+    
       include_role: 
        name: github:test
       when:
@@ -17,8 +18,6 @@
 - name: Prepare for patching
   gather_facts: no
   hosts: localhost
-  vars_files:
-    - ../vars/main.yml
   vars:
     required_roles:
       - github:test
