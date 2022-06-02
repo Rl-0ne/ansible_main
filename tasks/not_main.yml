@@ -1,5 +1,4 @@
 ---
-
 - name: Prepare for patching
   gather_facts: no
   hosts: localhost
