@@ -18,7 +18,7 @@
   gather_facts: no
   hosts: localhost
   vars_files:
-    - vars/main.yml
+    - ../vars/main.yml
   vars:
     required_roles:
       - github:test
