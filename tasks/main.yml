@@ -4,7 +4,8 @@
   hosts: all
   tasks:
     - name: display message
-      shell: cat /etc/*-release
+      debug:
+        msg: 'fdsfdsfsd'
     - name: includes | loading local task
       include_tasks: not_main.yml
     - name: includes | loading remote role
