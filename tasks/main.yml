@@ -3,13 +3,10 @@
 - name: Getting Started First Playbook
   hosts: all
   tasks:
-
     - name: display message
       shell: cat /etc/*-release
-    
     - name: includes | loading local task
       include_tasks: not_main.yml
-    
     - name: includes | loading remote role
       include_role: 
         name: github:test
