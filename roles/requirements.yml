@@ -5,3 +5,8 @@
   src: https://github.com/Rl-0ne/ansible_sub
   scm: git
   version: master
+
+- name: github:main
+  src: https://github.com/Rl-0ne/ansible_main
+  scm: git
+  version: master

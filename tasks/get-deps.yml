@@ -7,11 +7,11 @@
 - name: get-deps | Create requirments filter
   set_fact:
     requirements_filter: "[? {% for requirement in required_roles %}contains(src,'{{ requirement }}'){{ loop.last | ternary('', ' || ') }}{% endfor %}]"
-  when: ( required_roles is defined )
+  when: ( required_roles is defined ) and ( required_roles is iterable )
 - name: get-deps | Filter requirements
   set_fact:
     filtered_requirements: "{{ lookup('file', full_requirements_path) | from_yaml | json_query(requirements_filter) }}"
-  when: ( required_roles is defined )
+  when: ( required_roles is defined ) and ( required_roles is iterable )
 - name: get-deps | Write filtered requirements file for galaxy
   copy:
       content: "{{ filtered_requirements | to_nice_yaml }}"
