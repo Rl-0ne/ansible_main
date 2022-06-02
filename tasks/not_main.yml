@@ -6,7 +6,6 @@
   vars_files:
     - ../vars/main.yml
   vars:
-    relative_path: ../
     required_roles:
       - github:test
   tasks:
