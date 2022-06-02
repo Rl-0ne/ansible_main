@@ -2,8 +2,8 @@
 
 - name: get-deps | Consts
   set_fact:
-      full_requirements_path: "{{ relative_path }}/roles/requirements.yml"
-      filtered_requirements: "
+      full_requirements_path: "../roles/requirements.yml"
+      filtered_requirements: ""
 - name: get-deps | Create requirments filter
   set_fact:
     requirements_filter: "[? {% for requirement in required_roles %}contains(src,'{{ requirement }}'){{ loop.last | ternary('', ' || ') }}{% endfor %}]"
@@ -25,4 +25,4 @@
   changed_when: "'was installed successfully' in galaxy_result.stdout"
   environment:
     ANSIBLE_FORCE_COLOR: false
-    GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no
+    GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
