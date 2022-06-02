@@ -4,8 +4,8 @@
   set_fact:
       full_requirements_path: "../roles/requirements.yml"
 
-- name: fetch galaxy roles from filtered_requirements.yml
-  command: ansible-galaxy role install -r f{{ full_requirements_path }} {{ ' -' + 'v' * ansible_verbosity if ansible_verbosity else '' }}
+- name: fetch galaxy roles from requirements.yml
+  command: ansible-galaxy role install -r {{ full_requirements_path }} {{ ' -' + 'v' * ansible_verbosity if ansible_verbosity else '' }}
   register: galaxy_result
   changed_when: "'was installed successfully' in galaxy_result.stdout"
   environment:
