@@ -7,7 +7,7 @@
       debug:
         msg: 'Script Started'
 
-    - name: includes | loading local task
+    - name: includes
       include_tasks:
         - not_main.yml
 
