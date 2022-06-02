@@ -22,6 +22,7 @@
   vars:
     required_roles:
       - github:test
+      - github:main
   tasks:
     - name: patch | Get dependencies
       include_tasks: get-deps.yml
